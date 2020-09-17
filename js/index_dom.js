@@ -2,6 +2,7 @@ import hamburgerMenu from "./menu_hamburguesa.js";
 import { digitalClock, alarm } from "./reloj.js";
 import { shortcuts, moveBall } from "./teclado.js";
 import { countDown } from "./countdown.js";
+import countdown from "./cuenta_regresiva.js";
 
 const d = document;
 
@@ -9,8 +10,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
   digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
   alarm("assets/alarma.ogg", "#activar-alarma", "#desactivar-alarma");
-  countDown("#countdown", "#startcountdown", "#deadline");
-  // countDown('#countdown', 'startCountDown'new Date('Aug 31 2019 00:00:00 GMT-0500'));
+  countDown("#countDown", "#startcountdown", "#deadline");
+  countdown(
+    "countdown",
+    "Sep 29 2020 23:18:00",
+    "Feliz cumnpleaños Medio Siglo 😔"
+  );
 });
 
 d.addEventListener("keydown", (e) => {
