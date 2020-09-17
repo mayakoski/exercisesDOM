@@ -7,7 +7,7 @@
   --main-modal-color: rgba(247, 222, 30, 0.85);
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
-} 
+}
 
 html {
   box-sizing: border-box;
@@ -139,11 +139,10 @@ img {
 
 /* **************** Eventos del Teclado********************** */
 
-.blackBox{
+.blackBox {
   display: flex;
   min-height: 50vh;
-background: var(--second-color);
-
+  background: var(--second-color);
 }
 
 .circle {
@@ -152,5 +151,41 @@ background: var(--second-color);
   height: 4rem;
   border-radius: 50%;
   background-color: var(--main-color);
-  
+}
+
+/* ******************Top Scroll************************* */
+.topScroll {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: calc(1vw + 4.25rem);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  text-decoration: none;
+  font-size: 3rem;
+  font-style: bold;
+  transition: all 0.3s ease;
+}
+
+.topScroll:hover {
+  color: var(--main-color);
+  background-color: var(--second-color);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.shown {
+  visibility: visible;
+  opacity: 1;
+  transition: 1.3s;
 }
