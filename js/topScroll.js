@@ -1,7 +1,7 @@
 const d = document;
 export default function goTop(goTopBtn) {
   const goTop = d.querySelector(goTopBtn);
-  console.log(goTop);
+  // console.log(goTop);
   d.addEventListener("scroll", (e) => {
     if (document.body.scrollTop > 500 || d.documentElement.scrollTop > 500) {
       goTop.classList.remove("hidden");

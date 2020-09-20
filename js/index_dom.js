@@ -5,6 +5,8 @@ import { countDown } from "./countdown.js";
 import countdown from "./cuenta_regresiva.js";
 import goTop from "./topScroll.js";
 import scrollTopButton from "./boton_scroll.js";
+import changeTheme from "./changeTheme.js";
+import darkTheme from "./tema_oscuro.js";
 
 const d = document;
 
@@ -20,9 +22,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
   );
   goTop(".topScroll");
   scrollTopButton(".scroll-top-btn");
+  changeTheme(".darkLightBtn", ".main");
 });
 
 d.addEventListener("keydown", (e) => {
   shortcuts(e);
   moveBall(e, ".circle", ".blackBox");
 });
+
+darkTheme(".dark-theme-btn", "dark-mode");
